@@ -24,12 +24,15 @@
                                 <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
                                 <x-nav-link href=" /about" :active="request()->is('about')">About</x-nav-link>
                                 <x-nav-link href=" /contact" :active="request()->is('contact')">Contact</x-nav-link>
-                                <x-nav-link href=" /jobs" :active="request()->is('jobs')">Job</x-nav-link>
                                 @guest
                                 <x-nav-link href="/login" :active="request()->is('login')">Login</x-nav-link>
                                 <x-nav-link href="/register" :active="request()->is('register')">Register</x-nav-link>
                                 @endguest
                                 @auth
+                                <x-nav-link href="/deposit" :active="request()->is('register')">Deposit</x-nav-link>
+                                <x-nav-link href="/withdraw" :active="request()->is('register')">Withdraw</x-nav-link>
+                                <x-nav-link href="/transfer" :active="request()->is('register')">Transfer</x-nav-link>
+                                <x-nav-link href="/statement" :active="request()->is('register')">Statement</x-nav-link>
                                 <form method="POST" action="/logout">
                                     @csrf
                                     <x-form-button>Logout</x-form-button>
@@ -87,12 +90,16 @@
                     <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
                     <x-nav-link href=" /about" :active="request()->is('about')">About</x-nav-link>
                     <x-nav-link href=" /contact" :active="request()->is('contact')">Contact</x-nav-link>
-                    <x-nav-link href=" /jobs" :active="request()->is('jobs')">Job</x-nav-link>
                     @guest
                     <x-nav-link href="/login" :active="request()->is('login')">Login</x-nav-link>
                     <x-nav-link href="/register" :active="request()->is('register')">Register</x-nav-link>
                     @endguest
                     @auth
+                    <x-nav-link href="/deposit" :active="request()->is('register')">Deposit</x-nav-link>
+                    <x-nav-link href="/withdraw" :active="request()->is('register')">Withdraw</x-nav-link>
+                    <x-nav-link href="/transfer" :active="request()->is('register')">Transfer</x-nav-link>
+                    <x-nav-link href="/statement" :active="request()->is('register')">Statement</x-nav-link>
+
                     <form method="POST" action="/logout">
                     @csrf
                     <x-form-button>Logout</x-form-button>

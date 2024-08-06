@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
+use App\Models\Transaction;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -23,6 +25,6 @@ class RegisterUserController extends Controller
 
         $user = User::create($attributes);
         Auth::login($user);
-        return redirect('/jobs');
+        return redirect('/usermenu');
     }
 }
